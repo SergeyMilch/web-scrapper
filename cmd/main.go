@@ -110,7 +110,7 @@ func main() {
 		log.Println(err)
 	}
 
-	// Ввод адреса и нажатие Enter
+	// Ввод адреса (для выбора магазинов, из которых есть доставка по этому адресу) и нажатие Enter
 	err = chromedp.Run(ctx,
 		chromedp.SendKeys(`#by_courier > div.MainBanner_root__7uO0e.MainBanner_background__IiBe2.Address_banner__0VXxz.HomeLanding_banner__h1Y1D > div > div.Address_inputWrapper__g_O6L > div > div > input`, addressStore, chromedp.ByID),
 		chromedp.Sleep(2*time.Second), // Небольшая задержка для убеждения, что текст введен полностью
